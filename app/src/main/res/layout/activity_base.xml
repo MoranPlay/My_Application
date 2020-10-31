@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BaseActivity">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="61sp"
+        android:layout_marginBottom="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/enter_city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/spinner_city"
+        android:layout_width="233dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ad_city_button"
+        tools:ignore="MissingConstraints">
+
+    </Spinner>
+
+    <EditText
+        android:id="@+id/enter_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="13dp"
+        android:ems="14"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="108dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="9dp"
+        android:gravity="center"
+        android:text="Місто"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/enter_city"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/ad_city_button"
+        android:layout_width="388dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="12dp"
+        android:onClick="onClick"
+        android:text="Додати"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_city" />
+
+    <Button
+        android:id="@+id/del_city_button"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="7dp"
+        android:onClick="onClick"
+        android:text="Видалити"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinner_city"
+        app:layout_constraintTop_toBottomOf="@+id/ad_city_button" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="197dp"
+        android:text="Рік"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_year"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_city"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="32sp"
+        android:layout_marginEnd="172sp"
+        android:text="Бензин"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/petrol_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="32sp"
+        android:layout_marginEnd="170sp"
+        android:text="Дизель"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/diesel_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24sp"
+        android:text="Очищені стічні води"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/treated_wastewater_edit"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32sp"
+        android:layout_marginEnd="60dp"
+        android:text="Неочищені стічні води"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/untreated_waste_water_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:ignore="MissingConstraints,UnknownId" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32sp"
+        android:layout_marginEnd="128sp"
+        android:text="Активний мул"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/activated_sludge_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner_year"
+        android:layout_width="169dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="9dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/del_city_button"
+        tools:ignore="MissingConstraints">
+
+    </Spinner>
+
+    <EditText
+        android:id="@+id/petrol_edit"
+        android:layout_width="169sp"
+        android:layout_height="46sp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="8sp"
+        android:ems="8"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/del_city_button" />
+
+    <EditText
+        android:id="@+id/diesel_edit"
+        android:layout_width="169sp"
+        android:layout_height="46sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
+        android:ems="8"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petrol_edit" />
+
+    <EditText
+        android:id="@+id/treated_wastewater_edit"
+        android:layout_width="169sp"
+        android:layout_height="47sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diesel_edit"
+        tools:ignore="MissingConstraints"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/untreated_waste_water_edit"
+        android:layout_width="169sp"
+        android:layout_height="45sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/treated_wastewater_edit" />
+
+    <EditText
+        android:id="@+id/activated_sludge_edit"
+        android:layout_width="170sp"
+        android:layout_height="47sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="8sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/untreated_waste_water_edit" />
+
+    <Button
+        android:id="@+id/add_base_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="23dp"
+        android:onClick="onClick"
+        android:text="Додати"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/ref_base_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="23dp"
+        android:onClick="onClick"
+        android:text="Змінити"
+        app:layout_constraintStart_toEndOf="@+id/add_base_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/del_base_button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="4dp"
+        android:onClick="onClick"
+        android:text="видалити"
+        app:layout_constraintEnd_toStartOf="@+id/null_button"
+        app:layout_constraintStart_toEndOf="@+id/ref_base_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/null_button"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="Очистити"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
